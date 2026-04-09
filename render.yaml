@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: raja-portfolio
+    env: dotnet
+    buildCommand: dotnet publish -c Release -o out
+    startCommand: dotnet out/Raja_Portfolio.Server.dll
+    rootDir: Raja_Portfolio.Server
