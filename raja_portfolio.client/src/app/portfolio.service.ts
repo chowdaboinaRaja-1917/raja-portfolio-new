@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable({ providedIn: 'root' })
 export class PortfolioService {
 
-  private apiUrl = 'http://localhost:5189/api/portfolio';
+  private apiUrl = '/api/portfolio';
 
   constructor(private http: HttpClient) {}
 
