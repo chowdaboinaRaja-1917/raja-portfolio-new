@@ -473,6 +473,8 @@ textarea {
   cursor: pointer;
   position: absolute;
   right: 0;
+  bottom: -2%;
+  margin-bottom: 12px;
 }
 .btn-section{
     display:flex;
