@@ -348,7 +348,6 @@ form {
   border: 1px solid #334155;
   max-width: 600px;
   margin: auto;
-  width:100%;
   display:flex;
   flex-direction:column;
   gap:8px;
