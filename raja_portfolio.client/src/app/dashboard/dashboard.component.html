@@ -1,0 +1,334 @@
+<div class="main">
+  <!--<div class="profile-views">
+    Profile views:&nbsp;<span *ngIf="!isLoading">{{ status.profileViews }}</span>
+
+     Show spinner if loading 
+    <div *ngIf="isLoading" class="spinner"></div>
+  </div>-->
+  <div class="profile-view-section">
+    <div class="profile-views">
+      <i class="bi bi-eye icon"></i>
+      <div>
+        <p class="count" *ngIf="!isLoading">{{ status.profileViews }}</p>
+        <div *ngIf="isLoading" class="spinner"></div>
+        <p class="label">Profile Views</p>
+      </div>
+    </div>
+  </div>
+  <div class="header-section">
+
+    <div class="profile-card">
+      <img src="/Images/Raja-Profile.jpeg" class="profile-pic" />
+    </div>
+    <div class="about-section">
+      <h1 class="title">Chowdaboina Raja</h1>
+      <h1 class="animated-title">{{ typedName }}<span class="cursor">|</span></h1>
+      <h2 class="animated-title">{{ typedRole }}<span class="cursor">|</span></h2>
+      <!--<p>Building scalable web applications using Angular & .NET</p>
+    <button class="btn">Download CV</button>-->
+    </div>
+  </div>
+  <!-- HERO -->
+  <div class="hero section">
+    <!--<div class="profile-card">
+      <img src="/Images/Raja-Profile.jpeg" />
+    </div>-->
+    <div class="skills-section  grid-2">
+      <div>
+        <h2 class="section-title">About Me</h2>
+        <p class="about-me">
+          Full Stack Developer dedicated to the Microsoft ecosystem. With 2+ years of hands-on experience, I bridge the gap between robust C#/.NET logic and intuitive Angular interfaces. From designing RESTful APIs to optimizing SQL performance, I focus on building clean, maintainable code. Recognized by leadership for technical excellence and a 'client-first' approach to software delivery.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="section-title">Education</h2>
+        <div class="edu-section">
+          <div class="year-label">2024(Sep)-2025(Feb)</div>
+          <div class="course-label">React Traning at Naresh it Institute</div>
+        </div>
+        <div class="edu-section">
+          <div class="year-label">2021-2023</div>
+          <div class="course-label">MCA From ALC Vijayawada (9.6 CGPA)</div>
+        </div>
+        <div class="edu-section">
+          <div class="year-label">2019-2022</div>
+          <div class="course-label">BSC Computers From Krishna University Vijayawada (86 %)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT + EDUCATION -->
+  <!-- SKILLS -->
+  <div class="section">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="cards">
+      <div class="card">
+        <i class="bi bi-code-slash"></i>
+        <div class="skill">Full Stack .NET Developer</div>
+        <div class="skill-desc">
+          Building end-to-end web applications with a focus on scalability and clean architecture. I leverage C#, ASP.NET Core, and modern front-end frameworks to deliver high-performance solutions that bridge the gap between complex business logic and seamless user interfaces.
+        </div>
+      </div>
+      <div class="card">
+        <i class="bi bi-display"></i>
+
+        <div class="skill">Responsive Designer</div>
+        <div class="skill-desc">
+          Crafting immersive, mobile-first digital experiences. I ensure every application is pixel-perfect across all screen sizes, focusing on intuitive navigation and fast load times to maximize user engagement and accessibility.
+        </div>
+
+      </div>
+      <div class="card">
+        <i class="bi bi-braces-asterisk"></i>
+        <div class="skill">REST API Developer</div>
+        <div class="skill-desc">Architecting secure and efficient RESTful APIs using .NET Core. I specialize in building robust endpoints for data interoperability, optimizing database queries for faster response times, and implementing secure authentication to protect sensitive user data.</div>
+      </div>
+      <div class="card">
+        <i class="bi bi-lightbulb"></i>
+        <div class="skill">
+          Problem Solver
+        </div>
+        <div class="skill-desc">
+          Dedicated to resolving complex technical challenges and optimizing system performance. Whether it's debugging legacy code or architecting new features, I focus on identifying bottlenecks and implementing efficient, long-term solutions that drive business value.
+        </div>
+      </div>
+      <div class="card">
+        <i class="bi bi-people"></i>
+        <div class="skill">
+          Agile Methodology (Scrum)
+        </div>
+        <div class="skill-desc">
+          Thriving in Agile/Scrum environments. I actively participate in sprint planning and daily stand-ups to translate complex business requirements into actionable user stories and iterative software updates
+        </div>
+      </div>
+
+      <div class="card">
+        <i class="bi bi-git"></i>
+        <div class="skill">
+          Version Control & Collaboration (Git)
+        </div>
+        <div class="skill-desc">
+          Proficient in professional Git workflows, including branching strategies and pull request reviews on GitHub. I focus on maintaining clean project histories and collaborating effectively in Agile/Scrum team environments
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="section-title">Work Experience</h2>
+      <div class="experience-card">
+        <div class="exp-period">2024 March - 2026 Feb</div>
+        <div class="company">
+          Desidea Software Technologies
+
+        </div>
+        <div class="location">Hyderabad, Telangana</div>
+
+        <div class="divider"></div>
+
+        <ul class="exp-list">
+          <li>
+            Developed and maintained <b class="highlight">end-to-end web applications</b> using Angular and ASP.NET Core, ensuring scalability and responsiveness across devices.
+          </li>
+
+          <li>
+            Built <b class="highlight">reusable and responsive UI components</b> using Angular, improving maintainability and UI consistency by
+            <span class="highlight">30%</span>.
+          </li>
+
+          <li>
+            Designed and implemented <b class="highlight">RESTful APIs</b> using ASP.NET Core Web API, improving data communication efficiency by
+            <span class="highlight">20%</span>.
+          </li>
+
+          <li>
+            Developed <b class="highlight">data-driven dashboards</b> with optimized API integrations, enhancing user experience and data visibility by
+            <span class="highlight">25%</span>.
+          </li>
+
+          <li>
+            Optimized frontend performance using <b class="highlight">RxJS and efficient state management</b>, reducing page load time by
+            <span class="highlight">30%</span>.
+          </li>
+
+          <li>
+            Improved backend performance using <b class="highlight">Entity Framework Core and LINQ</b>, reducing API response time by
+            <span class="highlight">20%</span>.
+          </li>
+
+          <li>
+            Integrated multiple APIs and handled <b class="highlight">data transformation</b> for seamless frontend consumption.
+          </li>
+
+          <li>
+            Resolved production issues through <b class="highlight">root cause analysis</b>, improving system stability and reducing downtime by
+            <span class="highlight">30%</span>.
+          </li>
+
+          <li>
+            Collaborated with QA and business teams in an <b class="highlight">Agile Scrum environment</b>, ensuring timely delivery of features.
+          </li>
+
+          <li>
+            Managed tasks using <b class="highlight">JIRA</b>, ensuring completion within sprint timelines.
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    <!-- PROJECTS -->
+    <div class="section">
+      <h2 class="section-title">Projects</h2>
+      <div class="cards">
+        <div class="project-card">
+          <img src="/Images/Printer-dashboard.jpg" />
+          <div class="banner">
+            <div class="project-title">Brother Plus Galelio(GP1 & Gp2)</div>
+            <a href="https://www.brother-usa.com/home/" target="_blank" class="link-btn"><i class="bi bi-box-arrow-up-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="/Images/Plan-selection.jpg" />
+          <div class="banner">
+            <div class="project-title">Replenishment Programs</div>
+            <a href="https://www.brother-usa.com/supplies/EZ-Auto-Reordering" target="_blank" class="link-btn"><i class="bi bi-box-arrow-up-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="project-sub-title">Internal projects</h2>
+        <div class="cards">
+          <div class="project-card">
+            <img src="/Images/Helpdesk.jpg" />
+            <div class="banner">
+              <div class="project-title">Helpdesk</div>
+              <a href="" target="_blank" class="link-btn"><i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="/Images/fine-management.jpg" />
+            <div class="banner">
+              <div class="project-title">Fine tracking system</div>
+              <a href="" target="_blank" class="link-btn"><i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<div class="projects">
+        <div class="card" (click)="openProject('Project1')">
+          <h3>Brother Plus Galelio(GP1 & Gp2)</h3>
+          <p>Angular + .NET</p>
+        </div>
+
+        <div class="card" (click)="openProject('Project2')">
+          <h3>Replenishment</h3>
+          <p>API + UI</p>
+        </div>
+      </div>
+
+      <h3>Persional Projects</h3>
+      <div class="card" (click)="openProject('Project1')">
+        <h3>Brother Plus Galelio(GP1 & Gp2)</h3>
+        <p>Angular + .NET</p>
+      </div>-->
+
+      <div>
+        <div>
+          <h2 class="project-sub-title">Personal Projects</h2>
+          <div class="cards">
+            <div class="project-card">
+
+              <img src="/Images/Shopping.jpg" />
+              <div class="banner">
+                <div class="project-title">Shopping Template</div>
+                <a href="https://raja-portfolio-12ea6.web.app/Src/shopping.html" target="_blank" class="link-btn"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+            <div class="project-card">
+
+              <img src="/Images/fakestore.jpg" />
+              <div class="banner">
+                <div class="project-title">Shopping Template Using FakeStore API</div>
+                <a href="https://raja-portfolio-12ea6.web.app/Src/fakestoreapi.html" target="_blank" class="link-btn"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+            <div class="project-card">
+
+              <img src="/Images/Trip.png" />
+              <div class="banner">
+                <div class="project-title">Trvello Template</div>
+                <a href="https://raja-portfolio-12ea6.web.app/Src/Travel.html" target="_blank" class="link-btn"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT INFO -->
+    <div class="section contact">
+      <h2 class="section-title">Contact</h2>
+      <div>
+        <a href="mailto:rajachowdaboina3@gmail.com" class="nav-link" target="_blank"><i class="bi bi-send"></i> rajachowdaboina3&#64;gmail.com</a>
+      </div>
+      <div>
+        <a href="tel:8688647182" class="nav-link" target="_top"><i class="bi bi-telephone"></i> +918688647182</a>
+      </div>
+
+      <div class="social">
+        <a href="https://www.linkedin.com/in/chowdaboina-raja/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/chowdaboinaRaja-1917" target="_blank"><i class="bi bi-github"></i></a>
+      </div>
+      <div class="btn-group">
+        <div class="btn-section">
+          <a class="btn-download btn" download="Raja-resume" (click)="onDownloadClick()" href="/Raja_Chowdaboina_Resume_Fullstack.pdf">Download CV <i class="bi bi-download"></i></a>
+          <!--<div *ngIf="!isLoading" class="count">{{status.downloads}}</div>
+  <div *ngIf="isLoading" class="spinner"></div>-->
+        <div class="count-card">
+          <div class="count-number" *ngIf="!isLoading">{{status.downloads}}</div>
+          <div *ngIf="isLoading" class="spinner"></div>
+          <div class="count-label">Downloads</div>
+        </div>
+        </div>
+        <div class="btn-section">
+
+          <a class="btn btn-view" (click)="onViewClick()" target="_blank" href="/Raja_Chowdaboina_Resume_Fullstack.pdf">View CV <i class="bi bi-eye"></i></a>
+          <!--<div *ngIf="!isLoading" class="count">{{status.resumeViews}}</div>
+  <div *ngIf="isLoading" class="spinner"></div>-->
+     
+
+        <div class="count-card">
+          <div class="count-number" *ngIf="!isLoading">{{status.resumeViews}}</div>
+          <div *ngIf="isLoading" class="spinner"></div>
+          <div class="count-label">Views</div>
+        </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FORM -->
+    <div class="section form-section">
+      <h2>Contact Me</h2>
+
+      <form (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm">
+        <input [(ngModel)]="form.name" name="name" placeholder="Name" required />
+        <input [(ngModel)]="form.email" name="email" placeholder="Email" required type="email" #emailVar="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+        <div *ngIf="emailVar.errors?.['pattern']" class="error-msg">
+          Format must match name&#64;domain.com
+        </div>
+        <textarea [(ngModel)]="form.message" name="message" placeholder="Message"></textarea>
+
+        <button class="btn btn-submit" type="submit" [disabled]="contactForm.invalid || message=='sending Please wait....'">Send Message</button>
+        <div class="api-response" [ngStyle]="{'color':message=='sending Please wait....'?'red':'green'}">{{message}}</div>
+      </form>
+    </div>
+    <div class="top-arrow" title="go to top" (click)="gotoTop()">
+      <i class="bi bi-caret-up-fill"></i>
+    </div>
+  </div>
+
+</div>

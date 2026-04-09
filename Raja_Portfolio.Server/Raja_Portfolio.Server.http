@@ -1,0 +1,6 @@
+@Raja_Portfolio.Server_HostAddress = http://localhost:5189
+
+GET {{Raja_Portfolio.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
