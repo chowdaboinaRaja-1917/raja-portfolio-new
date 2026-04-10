@@ -352,7 +352,7 @@
         <textarea [(ngModel)]="form.message" name="message" placeholder="Message"></textarea>
 
         <button class="btn btn-submit" type="submit" [disabled]="contactForm.invalid || message=='sending Please wait....'">Send Message</button>
-        <div class="api-response" [ngStyle]="{'color':message=='sending Please wait....'?'red':'green'}">{{message}}</div>
+        <div class="api-response" [ngStyle]="{'color':message=='Sending please wait....'?'red':'green'}">{{message}}</div>
       </form>
     </div>
 
