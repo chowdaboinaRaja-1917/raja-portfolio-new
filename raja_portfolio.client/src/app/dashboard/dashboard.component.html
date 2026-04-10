@@ -328,8 +328,21 @@
 
     <!-- FORM -->
     <div class="section form-section">
-      <h2>Contact Me</h2>
 
+      <h2>Contact Me</h2>
+      <div class="contact-cta">
+        <h2 class="cta-heading">
+          Let’s build something impactful 🚀
+        </h2>
+
+        <p class="cta-sub">
+          I’m open to opportunities and collaborations
+        </p>
+
+        <p class="cta-trust">
+          ⚡ Usually responds within 24 hours
+        </p>
+      </div>
       <form (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm">
         <input [(ngModel)]="form.name" name="name" placeholder="Name" required />
         <input [(ngModel)]="form.email" name="email" placeholder="Email" required type="email" #emailVar="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />

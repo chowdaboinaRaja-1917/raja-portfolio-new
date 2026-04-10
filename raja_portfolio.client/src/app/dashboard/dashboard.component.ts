@@ -143,7 +143,7 @@ celebrateSuccess() {
     }, speed);
   }
   submitForm(myForm: NgForm) {
-    this.message = 'sending Please wait....'
+    this.message = 'Sending please wait....'
     const dataToSend = {
       name: this.form.name,
       email: this.form.email,
