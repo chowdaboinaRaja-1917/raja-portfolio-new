@@ -2,30 +2,46 @@
   <!--<div class="profile-views">
     Profile views:&nbsp;<span *ngIf="!isLoading">{{ status.profileViews }}</span>
 
-     Show spinner if loading 
+     Show spinner if loading
     <div *ngIf="isLoading" class="spinner"></div>
   </div>-->
+
   <div class="profile-view-section">
     <div class="profile-views">
       <i class="bi bi-eye icon"></i>
-      <div>
+      <div class="view-count-section">
+        <div class="red-dot" *ngIf="!isLoading && !isCountCompleted"></div>
         <p class="count" *ngIf="!isLoading">{{ status.profileViews }}</p>
         <div *ngIf="isLoading" class="spinner"></div>
         <p class="label">Profile Views</p>
       </div>
     </div>
-  </div>
-  <div class="header-section">
 
-    <div class="profile-card">
-      <img src="/Images/Raja-Profile.jpeg" class="profile-pic" />
+  </div>
+  <div class="header-main-section">
+    <div class="header-section">
+
+      <div class="profile-card">
+        <img src="/Images/Raja-Profile.jpeg" class="profile-pic" />
+      </div>
+      <div class="about-section">
+        <h1 class="title">Chowdaboina Raja</h1>
+        <div class="animated-section">
+          <h1 class="animated-title">{{ typedName }}<span class="cursor">|</span></h1>
+          <h2 class="animated-title">{{ typedRole }}<span class="cursor">|</span></h2>
+        </div>
+        <!--<p>Building scalable web applications using Angular & .NET</p>
+      <button class="btn">Download CV</button>-->
+      </div>
     </div>
-    <div class="about-section">
-      <h1 class="title">Chowdaboina Raja</h1>
-      <h1 class="animated-title">{{ typedName }}<span class="cursor">|</span></h1>
-      <h2 class="animated-title">{{ typedRole }}<span class="cursor">|</span></h2>
-      <!--<p>Building scalable web applications using Angular & .NET</p>
-    <button class="btn">Download CV</button>-->
+    <div class="scroll-indicator">
+      <span class="scroll-text">Scroll Down</span>
+
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+
+      <div class="arrow"></div>
     </div>
   </div>
   <!-- HERO -->
@@ -286,25 +302,25 @@
         <div class="btn-section">
           <a class="btn-download btn" download="Raja-resume" (click)="onDownloadClick()" href="/Raja_Chowdaboina_Resume_Fullstack.pdf">Download CV <i class="bi bi-download"></i></a>
           <!--<div *ngIf="!isLoading" class="count">{{status.downloads}}</div>
-  <div *ngIf="isLoading" class="spinner"></div>-->
-        <div class="count-card">
-          <div class="count-number" *ngIf="!isLoading">{{status.downloads}}</div>
-          <div *ngIf="isLoading" class="spinner"></div>
-          <div class="count-label">Downloads</div>
-        </div>
+          <div *ngIf="isLoading" class="spinner"></div>-->
+          <div class="count-card">
+            <div class="count-number" *ngIf="!isLoading">{{status.downloads}}</div>
+            <div *ngIf="isLoading" class="spinner"></div>
+            <div class="count-label">Downloads</div>
+          </div>
         </div>
         <div class="btn-section">
 
           <a class="btn btn-view" (click)="onViewClick()" target="_blank" href="/Raja_Chowdaboina_Resume_Fullstack.pdf">View CV <i class="bi bi-eye"></i></a>
           <!--<div *ngIf="!isLoading" class="count">{{status.resumeViews}}</div>
-  <div *ngIf="isLoading" class="spinner"></div>-->
-     
+          <div *ngIf="isLoading" class="spinner"></div>-->
 
-        <div class="count-card">
-          <div class="count-number" *ngIf="!isLoading">{{status.resumeViews}}</div>
-          <div *ngIf="isLoading" class="spinner"></div>
-          <div class="count-label">Views</div>
-        </div>
+
+          <div class="count-card">
+            <div class="count-number" *ngIf="!isLoading">{{status.resumeViews}}</div>
+            <div *ngIf="isLoading" class="spinner"></div>
+            <div class="count-label">Views</div>
+          </div>
         </div>
       </div>
 
@@ -326,6 +342,7 @@
         <div class="api-response" [ngStyle]="{'color':message=='sending Please wait....'?'red':'green'}">{{message}}</div>
       </form>
     </div>
+
     <div class="top-arrow" title="go to top" (click)="gotoTop()">
       <i class="bi bi-caret-up-fill"></i>
     </div>

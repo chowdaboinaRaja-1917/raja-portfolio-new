@@ -1,8 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { PortfolioService } from '../portfolio.service';
 import { NgForm } from '@angular/forms';
-import { pipe } from 'rxjs';
-
+import confetti from 'canvas-confetti';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -14,7 +13,8 @@ export class DashboardComponent {
   message!:string
   fullName: string = 'Hi i am, Raja';
   fullRole: string = '.NET Full Stack Developer';
-  isLoading:boolean = false
+  isLoading: boolean = false;
+  isCountCompleted:boolean = false;
   status: any = {
     profileViews: null,
     downloads: null,
@@ -36,26 +36,66 @@ export class DashboardComponent {
     this.loadStatus()
    // this.service.trackProfileView().subscribe();
   }
+
   loadStatus() {
     this.isLoading = true
-
     this.service.getStats().subscribe(res => {
       this.isLoading = false;
       this.status = res;
-      let target = this.status.profileViews;
-      let current = 0;
-      this.status.profileViews = 0
-      const counter = setInterval(() => {
-        if (current >= target) {
-          clearInterval(counter);
-        } else {
-          current++;
-          this.status.profileViews = current;
-        }
-      }, 500);
+      const isNewreq = sessionStorage.getItem("isNewreq")
+      if (!isNewreq) {
+        this.isCountCompleted = false;
+        sessionStorage.setItem("isNewreq", 'true')
+        let target = this.status.profileViews;
+        let current = 0;
+        this.status.profileViews = 0
+        const counter = setInterval(() => {
+          if (current >= target) {
+            this.isCountCompleted = true;
+            clearInterval(counter);
+          } else {
+            current++;
+            this.status.profileViews = current;
+          }
+        }, 100);
+      } else {
+        this.isCountCompleted = true;
+      }
+     
 
     });
   }
+
+celebrateSuccess() {
+  // Main burst
+  confetti({
+    particleCount: 120,
+    spread: 70,
+    origin: { y: 0.6 },
+    colors: ['#00c6ff', '#0072ff', '#ffffff'] // matches your theme
+  });
+
+  // Side bursts (premium feel)
+  setTimeout(() => {
+    confetti({
+      particleCount: 60,
+      angle: 60,
+      spread: 55,
+      origin: { x: 0 },
+      colors: ['#00c6ff', '#ffffff']
+    });
+
+    confetti({
+      particleCount: 60,
+      angle: 120,
+      spread: 55,
+      origin: { x: 1 },
+      colors: ['#0072ff', '#ffffff']
+    });
+  }, 300);
+}
+
+
   startTypingLoop() {
     const run = () => {
 
@@ -113,6 +153,7 @@ export class DashboardComponent {
       next: (res) => {
         const result:any = res
         this.message = result?.message
+        this.celebrateSuccess(); 
         myForm.resetForm();
         this.form = { name: '', email: '', message: '' };
         setTimeout(() => {
