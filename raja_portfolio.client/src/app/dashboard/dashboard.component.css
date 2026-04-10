@@ -531,11 +531,12 @@ textarea {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  position: absolute;
-  right: 0;
-  bottom: -1.2%;
 }
-
+.arrow-section{
+    margin-top:20px;
+    display:flex;
+    justify-content:flex-end;
+}
 .btn-section {
   display: flex;
   flex-direction: column;
@@ -643,6 +644,7 @@ textarea {
   font-size: 13px;
   letter-spacing: 2px;
   animation: float 2.5s ease-in-out infinite;
+  margin-top:30%;
 }
 
 /* Text */
@@ -732,7 +734,7 @@ textarea {
 .header-main-section {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
 }
 .cta-heading {
   text-align: center;
@@ -806,7 +808,17 @@ input:focus, textarea:focus {
 }
 
 @media(min-width:320px) and (max-width:743px) {
-
+  .title{
+      font-size:40px;
+  }
+  .profile-card{
+      width:150px;
+      height:150px;
+  }
+  .profile-pic{
+      width:150px;
+      height:150px;
+  }
   .skills-section {
     display: flex;
     flex-direction: column;
@@ -819,10 +831,7 @@ input:focus, textarea:focus {
 @media(max-width:1200px){
   .header-section {
     flex-direction: column;
+    padding:30px 0px;
   }
 }
-@media(min-width:743px){
-  .top-arrow{
-      bottom:-1.7%;
-  }
-}
+
