@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { PortfolioService } from '../portfolio.service';
 import { NgForm } from '@angular/forms';
 import confetti from 'canvas-confetti';
@@ -8,6 +8,8 @@ import confetti from 'canvas-confetti';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+
+
   typedName: string = '';
   typedRole: string = '';
   message!:string
@@ -159,7 +161,7 @@ celebrateSuccess() {
         this.isSuccess = true;
         // 📳 Only mobile
         if ('vibrate' in navigator) {
-          navigator.vibrate([80, 30, 80]);
+          navigator.vibrate([120, 30, 120]);
         }
         this.form = { name: '', email: '', message: '' };
         setTimeout(() => {

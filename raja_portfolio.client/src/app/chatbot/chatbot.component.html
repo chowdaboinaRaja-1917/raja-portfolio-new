@@ -1,0 +1,31 @@
+<!-- Floating Button -->
+<div class="chat-toggle" (click)="toggleChat()">
+  💬
+</div>
+
+<!-- Chat Window -->
+<div class="chat-window" *ngIf="isOpen" >
+  <div class="chat-header">
+    Raja Assistant 🤖
+    <span (click)="toggleChat()">✖</span>
+  </div>
+
+  <div class="chat-body">
+    <div *ngFor="let msg of messages; let last = last">
+      <div [ngClass]="msg.type" #lastMsg *ngIf="last">
+        {{ msg.text }}
+      </div>
+      <div [ngClass]="msg.type" *ngIf="!last">
+        {{ msg.text }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Options -->
+  <div class="chat-options">
+    <button (click)="handleOption('skills')">Skills</button>
+    <button (click)="handleOption('projects')">Projects</button>
+    <button (click)="handleOption('experience')">Experience</button>
+    <button (click)="handleOption('contact')">Contact</button>
+  </div>
+</div>

@@ -808,6 +808,7 @@ input:focus, textarea:focus {
 }
 .success-toast {
   animation: successPop 0.4s ease;
+  margin-top:10px;
 }
 
 @keyframes successPop {
