@@ -806,7 +806,23 @@ input:focus, textarea:focus {
   outline: none;
   transition: 0.3s;
 }
+.success-toast {
+  animation: successPop 0.4s ease;
+}
 
+@keyframes successPop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
 @media(min-width:320px) and (max-width:743px) {
   .title{
       font-size:40px;

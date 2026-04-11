@@ -14,7 +14,8 @@ export class DashboardComponent {
   fullName: string = 'Hi i am, Raja';
   fullRole: string = '.NET Full Stack Developer';
   isLoading: boolean = false;
-  isCountCompleted:boolean = false;
+  isCountCompleted: boolean = false;
+  isSuccess:boolean = false
   status: any = {
     profileViews: null,
     downloads: null,
@@ -155,12 +156,19 @@ celebrateSuccess() {
         this.message = result?.message
         this.celebrateSuccess(); 
         myForm.resetForm();
+        this.isSuccess = true;
+        // 📳 Only mobile
+        if ('vibrate' in navigator) {
+          navigator.vibrate([80, 30, 80]);
+        }
         this.form = { name: '', email: '', message: '' };
         setTimeout(() => {
           this.message = '';
-        },1000)
+          this.isSuccess = false;
+        },3000)
       },
       error: (err) => {
+        this.isSuccess = false
         this.message = err;
         setTimeout(() => {
           this.message = '';
